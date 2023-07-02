@@ -1,0 +1,20 @@
+<div class="mb-3 border-bottom row">
+  <div class="col-9">
+    <h4>{{job.title}}</h4>
+    <div >
+      <p class="mb-1"><b>Location</b> {{job.location}}</p>
+    </div>
+    {% if 'salary' in job %}
+    <div style="padding: 0;margin: 0;">
+      <p><b>Salary</b> {{job.salary}}</p>
+    </div>
+    {% else %}
+    <div>
+      <p><b>Salary</b> No information</p>
+    </div>
+    {% endif %}
+  </div>
+  <div class="col-3" style="margin-top: auto; transform: translate(0%, -104%);">
+    <a href="/api/jobs" type="button" class="btn btn-outline-dark">Apply</a>
+  </div>
+</div>
